@@ -18,8 +18,12 @@
     ├─ HISTORY.md  来自源目录（必须含 `## <version>` 段）
     └─ files/scripts/<目录>/…   只有 .lua（源目录里的 pack.json 等手续不装进脚本目录）
 
-清单 `scripts.json` 的字段（宿主读其中 id/name/version/size/description/urls/min_host）：
+清单 `scripts.json` 的字段（宿主读其中 id/name/version/size/description/urls/min_host/
+    author/license/released/api/unpacked_size/file_count）：
     id / name / version / description / size（字节，本脚本回写）/
+    author / license / released / api（打包校验）/
+    unpacked_size / file_count（本脚本按 .lua 实算并回写）/
+    description /
     min_host（宿主最低版本）/ dir（源目录，仅本脚本用）/
     urls.gitee / urls.github（release 资产地址，tag = `<id>_<version>`）
 """
@@ -65,7 +69,8 @@ def main() -> None:
 
     seen = set()
     for e in entries:
-        for key in ("id", "name", "version", "description", "dir", "urls"):
+        for key in ("id", "name", "version", "description", "dir", "urls",
+                    "author", "license", "released", "api"):
             if key not in e:
                 fail(f"清单项缺 {key}：{e}")
         pid, name, version = e["id"], e["name"], e["version"]
@@ -73,6 +78,10 @@ def main() -> None:
             fail(f"id 不合法：{pid}")
         if not VERSION_RE.match(version):
             fail(f"版本号不合法：{pid} {version}")
+        if not re.match(r"^\d{4}-\d{2}-\d{2}$", str(e["released"])):
+            fail(f"{pid} 的 released 必须是 YYYY-MM-DD")
+        if not isinstance(e["api"], int) or e["api"] < 0:
+            fail(f"{pid} 的 api 必须是非负整数")
         if pid in seen:
             fail(f"id 重复：{pid}")
         seen.add(pid)
@@ -95,6 +104,9 @@ def main() -> None:
         files = [f"scripts/{src.name}/{p.relative_to(src).as_posix()}" for p in lua]
         if len(files) != len(set(files)):
             fail(f"{pid} 的文件清单有重复")
+        # 详情窗要显示的"安装后体积 / 文件数"：打包时从 .lua 的实际大小算，别手填。
+        e["unpacked_size"] = sum(p.stat().st_size for p in lua)
+        e["file_count"] = len(files)
 
         tag = f"{pid}_{version}"
         for host in ("gitee", "github"):
