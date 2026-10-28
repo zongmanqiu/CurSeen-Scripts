@@ -1,0 +1,54 @@
+[
+  {
+    "id": "CursorFX",
+    "name": "CursorFX",
+    "version": "0.1.0",
+    "description": "42 个光标特效：光标、拖尾与点击三类",
+    "size": 97697,
+    "min_host": "2.0.5",
+    "dir": "MouseEffect/CursorFX",
+    "urls": {
+      "gitee": "https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorFX_0.1.0/CursorFX_0.1.0.zip",
+      "github": "https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorFX_0.1.0/CursorFX_0.1.0.zip"
+    }
+  },
+  {
+    "id": "CursorX",
+    "name": "CursorX",
+    "version": "0.1.0",
+    "description": "24 个光标效果，含镜片与悬停态",
+    "size": 51304,
+    "min_host": "2.0.5",
+    "dir": "MouseEffect/CursorX",
+    "urls": {
+      "gitee": "https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorX_0.1.0/CursorX_0.1.0.zip",
+      "github": "https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorX_0.1.0/CursorX_0.1.0.zip"
+    }
+  },
+  {
+    "id": "MFCMouseEffect",
+    "name": "MFCMouseEffect",
+    "version": "0.1.0",
+    "description": "25 个效果：点击、拖尾、滚轮、按住、悬停与光标",
+    "size": 49747,
+    "min_host": "2.0.5",
+    "dir": "MouseEffect/MFCMouseEffect",
+    "urls": {
+      "gitee": "https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.0/MFCMouseEffect_0.1.0.zip",
+      "github": "https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.0/MFCMouseEffect_0.1.0.zip"
+    }
+  },
+  {
+    "id": "MouseEffects",
+    "name": "MouseEffects",
+    "version": "0.1.0",
+    "description": "33 个环境与粒子效果：极光、星云、落叶、火焰",
+    "size": 68641,
+    "min_host": "2.0.5",
+    "dir": "MouseEffect/MouseEffects",
+    "urls": {
+      "gitee": "https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MouseEffects_0.1.0/MouseEffects_0.1.0.zip",
+      "github": "https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MouseEffects_0.1.0/MouseEffects_0.1.0.zip"
+    }
+  }
+]
