@@ -56,8 +56,14 @@ def check_catalog(url: str, local: dict):
         got = by_id.get(pid)
         if got is None:
             problems.append(f"缺 {pid}")
-        elif str(got.get("version")) != str(want["version"]):
+            continue
+        if str(got.get("version")) != str(want["version"]):
             problems.append(f"{pid} 版本 {got.get('version')} ≠ {want['version']}")
+        elif int(got.get("size") or 0) != int(want["size"]):
+            # ★ 版本号相同也可能是旧清单（历史包重打过、体积变了）：按体积再判一道。
+            problems.append(f"{pid} 体积 {got.get('size')} ≠ {want['size']}")
+        elif got.get("urls") != want.get("urls"):
+            problems.append(f"{pid} 下载地址与本地不一致")
     extra = [pid for pid in by_id if pid not in local]
     if extra:
         problems.append("多出：" + ", ".join(sorted(extra)))
