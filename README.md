@@ -13,10 +13,10 @@ CurSeen 的**脚本包**来源：每个包是一份 zip，装进 CurSeen 的 `as
 
 | 包 | 版本 | 脚本数 | 体积 | Gitee | GitHub |
 |---|---:|---:|---:|---|---|
-| CursorFX | 0.1.0 | 42 | 95.4 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorFX_0.1.0/CursorFX_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorFX_0.1.0/CursorFX_0.1.0.zip) |
-| CursorX | 0.1.0 | 24 | 50.1 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorX_0.1.0/CursorX_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorX_0.1.0/CursorX_0.1.0.zip) |
-| MFCMouseEffect | 0.1.0 | 25 | 48.6 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.0/MFCMouseEffect_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.0/MFCMouseEffect_0.1.0.zip) |
-| MouseEffects | 0.1.0 | 33 | 67.0 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MouseEffects_0.1.0/MouseEffects_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MouseEffects_0.1.0/MouseEffects_0.1.0.zip) |
+| CursorFX | 0.1.0 | 42 | 95.7 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorFX_0.1.0/CursorFX_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorFX_0.1.0/CursorFX_0.1.0.zip) |
+| CursorX | 0.1.0 | 24 | 50.4 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorX_0.1.0/CursorX_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorX_0.1.0/CursorX_0.1.0.zip) |
+| MFCMouseEffect | 0.1.0 | 25 | 48.9 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.0/MFCMouseEffect_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.0/MFCMouseEffect_0.1.0.zip) |
+| MouseEffects | 0.1.0 | 33 | 67.4 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MouseEffects_0.1.0/MouseEffects_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MouseEffects_0.1.0/MouseEffects_0.1.0.zip) |
 
 **机器清单**：[`scripts.json`](scripts.json)（宿主从两个镜像的 `main` 分支读取）：
 
@@ -54,6 +54,7 @@ CursorFX_0.1.0.zip
 ├─ pack.json   { id, name, version, files: ["scripts/CursorFX/animals.lua", …] }
 ├─ LICENSE     随包手续（宿主强制要求）
 ├─ README.md   随包手续（宿主强制要求）
+├─ HISTORY.md  随包手续（宿主强制要求；含 `## <版本>` 历史段）
 └─ files/scripts/CursorFX/…   ← 与 assets/lua/ 同构，装的时候整棵搬过去
 ```
 

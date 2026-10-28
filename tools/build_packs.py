@@ -15,6 +15,7 @@
     ├─ pack.json   { id, name, version, files: ["scripts/<目录>/x.lua", …] }
     ├─ LICENSE     来自源目录
     ├─ README.md   来自源目录
+    ├─ HISTORY.md  来自源目录（必须含 `## <version>` 段）
     └─ files/scripts/<目录>/…   只有 .lua（源目录里的 pack.json 等手续不装进脚本目录）
 
 清单 `scripts.json` 的字段（宿主读其中 id/name/version/size/description/urls/min_host）：
@@ -81,9 +82,14 @@ def main() -> None:
             fail(f"源目录不存在：{src}")
         if src.parent.name != "MouseEffect":
             fail(f"源目录必须在 MouseEffect/ 下：{src}")
-        for need in ("LICENSE", "README.md"):
+        for need in ("LICENSE", "README.md", "HISTORY.md"):
             if not (src / need).is_file():
                 fail(f"{src} 缺 {need}（包必须带手续）")
+        # 每个包自己的版本历史：当前 catalog 版本必须有一段 `## <version>`，
+        # 否则"发版没写历史"会悄悄发生。
+        history = (src / "HISTORY.md").read_text(encoding="utf-8")
+        if f"## {version}" not in history:
+            fail(f"{src}/HISTORY.md 缺少 `## {version}` 段（发版必须写历史）")
 
         lua = lua_files(src)
         files = [f"scripts/{src.name}/{p.relative_to(src).as_posix()}" for p in lua]
@@ -108,6 +114,7 @@ def main() -> None:
                 z.writestr("pack.json", json.dumps(meta, ensure_ascii=False, indent=2) + "\n")
                 z.write(src / "LICENSE", "LICENSE")
                 z.write(src / "README.md", "README.md")
+                z.write(src / "HISTORY.md", "HISTORY.md")
                 for p, rel in zip(lua, files):
                     z.write(p, "files/" + rel)
             e["size"] = zip_path.stat().st_size

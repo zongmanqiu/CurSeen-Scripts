@@ -4,7 +4,7 @@
     "name": "CursorFX",
     "version": "0.1.0",
     "description": "42 个光标特效：光标、拖尾与点击三类",
-    "size": 97697,
+    "size": 98012,
     "min_host": "2.0.5",
     "dir": "MouseEffect/CursorFX",
     "urls": {
@@ -17,7 +17,7 @@
     "name": "CursorX",
     "version": "0.1.0",
     "description": "24 个光标效果，含镜片与悬停态",
-    "size": 51304,
+    "size": 51615,
     "min_host": "2.0.5",
     "dir": "MouseEffect/CursorX",
     "urls": {
@@ -30,7 +30,7 @@
     "name": "MFCMouseEffect",
     "version": "0.1.0",
     "description": "25 个效果：点击、拖尾、滚轮、按住、悬停与光标",
-    "size": 49747,
+    "size": 50086,
     "min_host": "2.0.5",
     "dir": "MouseEffect/MFCMouseEffect",
     "urls": {
@@ -43,7 +43,7 @@
     "name": "MouseEffects",
     "version": "0.1.0",
     "description": "33 个环境与粒子效果：极光、星云、落叶、火焰",
-    "size": 68641,
+    "size": 68977,
     "min_host": "2.0.5",
     "dir": "MouseEffect/MouseEffects",
     "urls": {
