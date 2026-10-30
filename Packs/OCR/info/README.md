@@ -8,8 +8,10 @@
 本包安装后会同时得到：
 
 ```text
-<CurSeen>/assets/lua/scripts/
+<CurSeen>/assets/lua/scripts/OCR/
 ├─ 2.ocr_text.lua
+├─ pack.json
+├─ info/                ← LICENSE / README / HISTORY
 └─ ocr_tool/
    ├─ CurSeenOcr.exe
    ├─ ch_PP-OCRv4_det_mobile.onnx

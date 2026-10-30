@@ -27,8 +27,8 @@
 ## 安装
 
 在 CurSeen「设置 → 官方资源下载」里刷新并安装；脚本会装到
-`assets/lua/scripts/1.image_report.lua`。也可以手动把本目录的 `.lua` 放进
-`assets/lua/scripts/`。
+`assets/lua/scripts/ImageReport/1.image_report.lua`。手动安装时把整个包文件夹
+（`pack.json` + `.lua` + `info/`）放进 `assets/lua/scripts/ImageReport/`。
 
 ## 用法
 

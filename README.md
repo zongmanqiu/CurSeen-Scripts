@@ -2,9 +2,10 @@
 
 > **仓库入口**：[**Gitee**](https://gitee.com/qiuzongman/CurSeen-Scripts) | [**GitHub**](https://github.com/zongmanqiu/CurSeen-Scripts)
 
-CurSeen 的**脚本包**来源：每个包是一份 zip，装进 CurSeen 的 `assets/lua/`，由宿主
-「设置 → 官方资源下载」列出、下载、更新、卸载。七个包：四个鼠标特效在
-[`MouseEffect/`](MouseEffect/)，图片体检、OCR 文字识别与条码识别在 [`Packs/`](Packs/)。
+CurSeen 的**脚本包**来源：每个包是一份 zip，解压后就是一个稳定的包文件夹
+（`assets/lua/scripts/<id>/`），由宿主「设置 → 官方资源下载」列出、下载、更新、卸载。
+七个包：四个鼠标特效在 [`MouseEffect/`](MouseEffect/)，图片体检、OCR 文字识别与条码识别在
+[`Packs/`](Packs/)。
 
 ★ 本仓库**只放源码**：打包出来的 zip 不提交、不进仓库（生成到仓库外 `../.temp/curseen-scripts-dist/`）。
 版本从 **0.1.0** 起；出厂包在宿主里认领为 `v0.0.0`，所以首个在线版本仍会显示为「升级」。
@@ -13,13 +14,13 @@ CurSeen 的**脚本包**来源：每个包是一份 zip，装进 CurSeen 的 `as
 
 | 包 | 版本 | 发行时间 | 文件数 | 体积 | Gitee | GitHub |
 |---|---:|---|---:|---:|---|---|
-| CursorFX | 0.1.1 | 2026-10-30 | 45 | 99.2 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorFX_0.1.1/CursorFX_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorFX_0.1.1/CursorFX_0.1.1.zip) |
-| CursorX | 0.1.1 | 2026-10-30 | 27 | 54.2 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorX_0.1.1/CursorX_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorX_0.1.1/CursorX_0.1.1.zip) |
-| MFCMouseEffect | 0.1.1 | 2026-10-30 | 28 | 53.4 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.1/MFCMouseEffect_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.1/MFCMouseEffect_0.1.1.zip) |
-| MouseEffects | 0.1.1 | 2026-10-30 | 36 | 73.3 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MouseEffects_0.1.1/MouseEffects_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MouseEffects_0.1.1/MouseEffects_0.1.1.zip) |
-| 图片体检 | 0.1.1 | 2026-10-30 | 4 | 9.2 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/ImageReport_0.1.1/ImageReport_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/ImageReport_0.1.1/ImageReport_0.1.1.zip) |
-| OCR 文字识别 | 0.2.1 | 2026-10-30 | 9 | 20.2 MB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/OCR_0.2.1/OCR_0.2.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/OCR_0.2.1/OCR_0.2.1.zip) |
-| 条码识别 | 0.1.1 | 2026-10-30 | 5 | 758.7 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/Barcode_0.1.1/Barcode_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/Barcode_0.1.1/Barcode_0.1.1.zip) |
+| CursorFX | 0.2.0 | 2026-10-30 | 46 | 96.2 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorFX_0.2.0/CursorFX_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorFX_0.2.0/CursorFX_0.2.0.zip) |
+| CursorX | 0.2.0 | 2026-10-30 | 28 | 50.7 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorX_0.2.0/CursorX_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorX_0.2.0/CursorX_0.2.0.zip) |
+| MFCMouseEffect | 0.2.0 | 2026-10-30 | 29 | 49.3 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MFCMouseEffect_0.2.0/MFCMouseEffect_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MFCMouseEffect_0.2.0/MFCMouseEffect_0.2.0.zip) |
+| MouseEffects | 0.2.0 | 2026-10-30 | 37 | 67.6 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MouseEffects_0.2.0/MouseEffects_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MouseEffects_0.2.0/MouseEffects_0.2.0.zip) |
+| 图片体检 | 0.2.0 | 2026-10-30 | 5 | 7.8 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/ImageReport_0.2.0/ImageReport_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/ImageReport_0.2.0/ImageReport_0.2.0.zip) |
+| OCR 文字识别 | 0.3.0 | 2026-10-30 | 10 | 20.2 MB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/OCR_0.3.0/OCR_0.3.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/OCR_0.3.0/OCR_0.3.0.zip) |
+| 条码识别 | 0.2.0 | 2026-10-30 | 6 | 756.8 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/Barcode_0.2.0/Barcode_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/Barcode_0.2.0/Barcode_0.2.0.zip) |
 
 **机器清单**：[`scripts.json`](scripts.json)（宿主从两个镜像的 `main` 分支读取）：
 
@@ -37,9 +38,9 @@ CurSeen 的**脚本包**来源：每个包是一份 zip，装进 CurSeen 的 `as
 
 ★ **出厂联动**：四个鼠标特效包同时也是 CurSeen 的出厂脚本，宿主启动时会把盘上的
 出厂目录认领成 `v0.0.0` 的安装记录，所以在线上包才能覆盖/更新/卸载出厂那份（只写记录，
-不动文件）。图片体检 / OCR / 二维码包**不再内置**，装完后落在 `assets/lua/scripts/` 根下
-（脚本直接在根目录，安装记录用 `.curseen-pack.<id>.json` 区分）；OCR 文字识别与条码识别包自带
-官方工具，装包即用。
+不动文件）。图片体检 / OCR / 条码识别包**不再内置**；所有在线包都装进自己的稳定文件夹
+`assets/lua/scripts/<id>/`（脚本平铺、`info/` 放文档，记录写在文件夹里的
+`.curseen-pack.json`）。OCR 文字识别与条码识别包自带官方工具，装包即用。
 
 ## 目录
 
@@ -50,7 +51,7 @@ CurSeen 的**脚本包**来源：每个包是一份 zip，装进 CurSeen 的 `as
 | 上传后自检（清单 + 全部下载地址） | [`tools/check_remote.py`](tools/check_remote.py) |
 | 机器清单（宿主直接读） | [`scripts.json`](scripts.json) |
 | 四个鼠标特效包的源码与各自的 LICENSE / README | [`MouseEffect/`](MouseEffect/) |
-| 图片体检 / OCR / 二维码包的源码与各自的 LICENSE / README | [`Packs/`](Packs/) |
+| 图片体检 / OCR / 条码识别包的源码与各自的 LICENSE / README | [`Packs/`](Packs/) |
 | 官方 OCR / 条码工具的源码、构建脚本与上游版本锁 | [`tools/`](tools/) |
 | 第三方来源与许可 | [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md) |
 | 本仓库许可（AGPL-3.0 全文） | [`LICENSE`](LICENSE) |
@@ -58,17 +59,19 @@ CurSeen 的**脚本包**来源：每个包是一份 zip，装进 CurSeen 的 `as
 ## 包格式（一眼版）
 
 ```text
-CursorFX_0.1.0.zip
-├─ pack.json   { id, name, version, files: ["scripts/CursorFX/animals.lua", …] }
-├─ LICENSE     随包手续（宿主强制要求）
-├─ README.md   随包手续（宿主强制要求）
-├─ HISTORY.md  随包手续（宿主强制要求；含 `## <版本>` 历史段）
-└─ files/scripts/CursorFX/…   ← 与 assets/lua/ 同构，装的时候整棵搬过去
-   files/scripts/CursorFX_0.1.0/{LICENSE,README.md,HISTORY.md}  ← 装完的文档夹
+CursorFX_0.2.0.zip
+└─ CursorFX/                 ← 解压到 assets/lua/scripts/ 后就是稳定包文件夹
+   ├─ pack.json              ← { id, name, version, layout: 2, files: [...] }
+   ├─ *.lua                  ← 脚本平铺在包根
+   ├─ info/
+   │  ├─ LICENSE
+   │  ├─ README.md
+   │  └─ HISTORY.md          ← 含 `## <版本>` 历史段
+   └─ <tool_dest>/…          ← 官方工具（OCR / 条码包才有）
 ```
 
-`Packs/` 包在清单里写 `"mount": "scripts"`，`files/` 里是 `scripts/1.image_report.lua`
-这样的根级路径（不再往下套一层包名目录，脚本 id 与旧内置版一致）。
+升级 = **整个包文件夹替换**：旧文件夹先整体挪开，新文件夹落到原位，再把旧文件清掉；
+不会出现"只覆盖同名文件、改名后的旧脚本残留"的问题。包外的用户脚本/内置脚本一个不动。
 
 详细的字段、校验与冲突规则见 [`开发指南.md`](开发指南.md)。
 

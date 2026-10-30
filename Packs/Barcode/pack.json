@@ -1,0 +1,7 @@
+{
+  "id": "Barcode",
+  "name": "条码识别",
+  "version": "0.2.0",
+  "category": "picture",
+  "single": true
+}

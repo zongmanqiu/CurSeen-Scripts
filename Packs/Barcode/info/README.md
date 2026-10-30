@@ -14,8 +14,10 @@
 安装后得到：
 
 ```text
-<CurSeen>/assets/lua/scripts/
+<CurSeen>/assets/lua/scripts/Barcode/
 ├─ barcode.lua
+├─ pack.json
+├─ info/                ← LICENSE / README / HISTORY
 └─ barcode_tool/
    └─ CurSeenBarcode.exe
 ```

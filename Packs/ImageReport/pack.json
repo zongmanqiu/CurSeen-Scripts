@@ -1,0 +1,7 @@
+{
+  "id": "ImageReport",
+  "name": "图片体检",
+  "version": "0.2.0",
+  "category": "picture",
+  "single": true
+}

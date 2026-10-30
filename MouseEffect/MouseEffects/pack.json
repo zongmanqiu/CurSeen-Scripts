@@ -1,7 +1,7 @@
 {
   "id": "MouseEffects",
   "name": "MouseEffects",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "category": "mouse",
   "license": "AGPL-3.0",
   "default": "aurora",

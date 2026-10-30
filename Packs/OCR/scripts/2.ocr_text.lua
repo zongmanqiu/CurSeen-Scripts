@@ -33,9 +33,9 @@ requires = {
 
 -- 外置引擎的位置：全部是**相对脚本目录**的路径（`ext:proc` 只认这种写法）。
 -- 目录形状（官方 OCR 包装好即用；这里是工具文件清单）：
---   scripts\2.ocr_text.lua
---   scripts\ocr_tool\CurSeenOcr.exe         ← 官方工具（静态链着 onnxruntime）
---   scripts\ocr_tool\*.onnx / *.txt         ← 模型与字典（-d . 按 exe 同目录找）
+--   scripts\OCR\2.ocr_text.lua
+--   scripts\OCR\ocr_tool\CurSeenOcr.exe         ← 官方工具（静态链着 onnxruntime）
+--   scripts\OCR\ocr_tool\*.onnx / *.txt         ← 模型与字典（-d . 按 exe 同目录找）
 local TOOL = {
   exe  = "./ocr_tool/CurSeenOcr.exe",
   det  = "ch_PP-OCRv4_det_mobile.onnx",

@@ -25,4 +25,4 @@ powershell -ExecutionPolicy Bypass -File tools/barcode/build.ps1 `
 
 脚本会把 `src/main.cpp` 覆盖进 `example/ZXingReader.cpp`、关闭 docs 子目录、
 链接静态 ZXing 并编出 `ZXingReader.exe`，复制为 `CurSeenBarcode.exe`。
-`OutDir` 的内容发布时安装到 `assets/lua/scripts/barcode_tool/`。
+`OutDir` 的内容发布时装到包内的 `Barcode/barcode_tool/`。

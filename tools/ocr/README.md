@@ -30,5 +30,5 @@ powershell -ExecutionPolicy Bypass -File tools/ocr/build.ps1 `
 `OpenCV_ARCH=x64 / OpenCV_RUNTIME=vc16`：工程里的 OpenCV 静态库是 VS2019 的，
 MSVC v142/v143 ABI 兼容，但 `OpenCVConfig.cmake` 不认 VS2022 的 194x 版本号。
 
-发布时 `OutDir` 的内容会装到 `assets/lua/scripts/ocr_tool/`；`2.ocr_text.lua`
+发布时 `OutDir` 的内容会装到包里的 `ocr_tool/`（安装后是 `assets/lua/scripts/OCR/ocr_tool/`）；`2.ocr_text.lua`
 的 `requires` 与 `TOOL` 都指向这里。用户只装包，不需要自己准备工具。

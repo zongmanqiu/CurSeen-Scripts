@@ -1,5 +1,12 @@
 # 图片体检 历史
 
+## 0.2.0（2026-10-30）
+
+- 包结构改为稳定文件夹 `ImageReport/`：`scripts/1.image_report.lua` 平铺、`info/` 放文档、
+  `pack.json` 放配置；一次解压到 `assets/lua/scripts/` 即用。
+- 升级按整个包文件夹替换；脚本 id 变为 `scripts/ImageReport/1.image_report`。
+
+
 ## 0.1.1（2026-10-30）
 
 - 说明补全：明确图片体检的六组读数、WCAG 对比度与拉普拉斯清晰度；补搜索关键词。

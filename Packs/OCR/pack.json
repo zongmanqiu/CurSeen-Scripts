@@ -1,0 +1,7 @@
+{
+  "id": "OCR",
+  "name": "OCR 文字识别",
+  "version": "0.3.0",
+  "category": "text",
+  "single": true
+}
