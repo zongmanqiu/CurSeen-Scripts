@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""把 MouseEffect/<包>/ 或 Packs/<包>/ 打成 CurSeen 商店包（zip），并把体积回写 scripts.json。
+"""把 Packs/<包>/ 打成 CurSeen 商店包（zip），并把体积回写 scripts.json。
 
 包结构（2026-10-30 定案，v2）：
 
     <id>_<version>.zip
     └─ <id>/                     ← 解压到 assets/lua/scripts 后就是稳定包文件夹
        ├─ pack.json              ← 包配置（下拉/默认项/版本）
-       ├─ *.lua                  ← 脚本平铺（来自源目录 scripts/）
+       ├─ *                       ← 脚本/资料平铺（来自源目录 scripts/，至少一个 .lua）
        ├─ <tool_dest>/…          ← 官方工具（如有；来自仓外构建输出）
        └─ info/
           ├─ LICENSE
@@ -46,10 +46,10 @@ def safe_rel(rel: str, what: str) -> None:
         fail(f"{what} 不安全：{rel}")
 
 
-def lua_files(src: Path):
+def payload_files(src: Path):
     d = src / "scripts"
-    files = sorted(p for p in d.rglob("*.lua") if p.is_file())
-    if not files:
+    files = sorted(p for p in d.rglob("*") if p.is_file())
+    if not any(p.suffix == ".lua" for p in files):
         fail(f"{d} 下没有 .lua（v2 包必须把脚本放在 scripts/ 下）")
     return files
 
@@ -63,7 +63,7 @@ def package_entries(src: Path, e: dict, tool_root: Path, check: bool):
             fail(f"{src} 缺 info/{doc}（包必须带手续）")
         entries.append((p, f"info/{doc}"))
 
-    for p in lua_files(src):
+    for p in payload_files(src):
         rel = p.relative_to(src / "scripts").as_posix()
         safe_rel(rel, "脚本路径")
         entries.append((p, rel))
@@ -132,8 +132,8 @@ def main() -> None:
         src = ROOT / e["dir"]
         if not src.is_dir():
             fail(f"源目录不存在：{src}")
-        if src.parent.name not in ("MouseEffect", "Packs"):
-            fail(f"源目录必须在 MouseEffect/ 或 Packs/ 下：{src}")
+        if src.parent.name != "Packs":
+            fail(f"源目录必须在 Packs/ 下：{src}")
         pack_src = src / "pack.json"
         if not pack_src.is_file():
             fail(f"{src} 缺 pack.json")

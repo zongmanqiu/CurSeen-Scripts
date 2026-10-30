@@ -4,8 +4,8 @@
 
 CurSeen 的**脚本包**来源：每个包是一份 zip，解压后就是一个稳定的包文件夹
 （`assets/lua/scripts/<id>/`），由宿主「设置 → 官方资源下载」列出、下载、更新、卸载。
-七个包：四个鼠标特效在 [`MouseEffect/`](MouseEffect/)，图片体检、OCR 文字识别与条码识别在
-[`Packs/`](Packs/)。
+八个包全部平铺在 [`Packs/`](Packs/) 下：四个鼠标特效、AI 写脚本、图片体检、
+OCR 文字识别与条码识别。
 
 ★ 本仓库**只放源码**：打包出来的 zip 不提交、不进仓库（生成到仓库外 `../.temp/curseen-scripts-dist/`）。
 版本从 **0.1.0** 起；出厂包在宿主里认领为 `v0.0.0`，所以首个在线版本仍会显示为「升级」。
@@ -18,6 +18,7 @@ CurSeen 的**脚本包**来源：每个包是一份 zip，解压后就是一个�
 | CursorX | 0.2.0 | 2026-10-30 | 28 | 50.7 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorX_0.2.0/CursorX_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorX_0.2.0/CursorX_0.2.0.zip) |
 | MFCMouseEffect | 0.2.0 | 2026-10-30 | 29 | 49.3 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MFCMouseEffect_0.2.0/MFCMouseEffect_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MFCMouseEffect_0.2.0/MFCMouseEffect_0.2.0.zip) |
 | MouseEffects | 0.2.0 | 2026-10-30 | 37 | 67.6 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MouseEffects_0.2.0/MouseEffects_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MouseEffects_0.2.0/MouseEffects_0.2.0.zip) |
+| AI 写脚本 | 0.1.0 | 2026-10-30 | 6 | 23.1 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/AI_0.1.0/AI_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/AI_0.1.0/AI_0.1.0.zip) |
 | 图片体检 | 0.2.0 | 2026-10-30 | 5 | 7.8 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/ImageReport_0.2.0/ImageReport_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/ImageReport_0.2.0/ImageReport_0.2.0.zip) |
 | OCR 文字识别 | 0.3.0 | 2026-10-30 | 10 | 20.2 MB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/OCR_0.3.0/OCR_0.3.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/OCR_0.3.0/OCR_0.3.0.zip) |
 | 条码识别 | 0.2.0 | 2026-10-30 | 6 | 756.8 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/Barcode_0.2.0/Barcode_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/Barcode_0.2.0/Barcode_0.2.0.zip) |
@@ -38,9 +39,9 @@ CurSeen 的**脚本包**来源：每个包是一份 zip，解压后就是一个�
 
 ★ **出厂联动**：四个鼠标特效包同时也是 CurSeen 的出厂脚本，宿主启动时会把盘上的
 出厂目录认领成 `v0.0.0` 的安装记录，所以在线上包才能覆盖/更新/卸载出厂那份（只写记录，
-不动文件）。图片体检 / OCR / 条码识别包**不再内置**；所有在线包都装进自己的稳定文件夹
-`assets/lua/scripts/<id>/`（脚本平铺、`info/` 放文档，记录写在文件夹里的
-`.curseen-pack.json`）。OCR 文字识别与条码识别包自带官方工具，装包即用。
+不动文件）。AI 写脚本 / 图片体检 / OCR / 条码识别包**不再内置**；所有在线包都装进自己的
+稳定文件夹 `assets/lua/scripts/<id>/`（脚本与同目录资料平铺、`info/` 放文档，记录写在
+文件夹里的 `.curseen-pack.json`）。OCR 文字识别与条码识别包自带官方工具，装包即用。
 
 ## 目录
 
@@ -50,8 +51,7 @@ CurSeen 的**脚本包**来源：每个包是一份 zip，解压后就是一个�
 | 打 zip（输出到仓库外）、回写体积 | [`tools/build_packs.py`](tools/build_packs.py) |
 | 上传后自检（清单 + 全部下载地址） | [`tools/check_remote.py`](tools/check_remote.py) |
 | 机器清单（宿主直接读） | [`scripts.json`](scripts.json) |
-| 四个鼠标特效包的源码与各自的 LICENSE / README | [`MouseEffect/`](MouseEffect/) |
-| 图片体检 / OCR / 条码识别包的源码与各自的 LICENSE / README | [`Packs/`](Packs/) |
+| 八个官方包的源码与各自的 LICENSE / README | [`Packs/`](Packs/) |
 | 官方 OCR / 条码工具的源码、构建脚本与上游版本锁 | [`tools/`](tools/) |
 | 第三方来源与许可 | [`THIRD-PARTY-NOTICES.md`](THIRD-PARTY-NOTICES.md) |
 | 本仓库许可（AGPL-3.0 全文） | [`LICENSE`](LICENSE) |
@@ -62,7 +62,7 @@ CurSeen 的**脚本包**来源：每个包是一份 zip，解压后就是一个�
 CursorFX_0.2.0.zip
 └─ CursorFX/                 ← 解压到 assets/lua/scripts/ 后就是稳定包文件夹
    ├─ pack.json              ← { id, name, version, layout: 2, files: [...] }
-   ├─ *.lua                  ← 脚本平铺在包根
+   ├─ *                      ← 脚本与同目录资料平铺在包根（至少一个 .lua）
    ├─ info/
    │  ├─ LICENSE
    │  ├─ README.md
