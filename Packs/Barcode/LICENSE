@@ -1,0 +1,5 @@
+CurSeen Barcode Lua 扩展包
+
+本目录的 Lua 代码由 CurSeen 项目独立编写，随 CurSeen 按 GNU AGPL-3.0 分发。
+条码引擎来自 ZXing-C++（Apache-2.0），由 CurSeen 官方构建并随包分发；
+上游版权与许可见 tools/barcode/LICENSE 与 tools/barcode/upstream.lock.json。

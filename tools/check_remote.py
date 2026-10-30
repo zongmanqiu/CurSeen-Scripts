@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""上传后自检：清单可达吗？四个下载地址真的能下、体积对得上吗？
+"""上传后自检：清单可达吗？全部下载地址真的能下、体积对得上吗？
 
 用法（在仓库根）：
     python tools/check_remote.py           # Gitee 必过；GitHub 未镜像只告警
@@ -145,7 +145,7 @@ def main() -> None:
     if failed:
         print("存在失败项（Gitee 为默认来源，失败即不可用）。")
         sys.exit(1)
-    print("自检通过：宿主默认来源可拉清单、四个包都可下载且体积一致。")
+    print("自检通过：宿主默认来源可拉清单、全部包都可下载且体积一致。")
 
 
 if __name__ == "__main__":

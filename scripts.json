@@ -4,7 +4,7 @@
     "name": "CursorFX",
     "version": "0.1.0",
     "description": "42 个光标特效：光标、拖尾与点击三类",
-    "size": 98012,
+    "size": 100151,
     "min_host": "2.0.5",
     "dir": "MouseEffect/CursorFX",
     "urls": {
@@ -13,17 +13,17 @@
     },
     "author": "CurSeen",
     "license": "AGPL-3.0",
-    "released": "2026-10-28",
+    "released": "2026-10-30",
     "api": 1,
-    "unpacked_size": 224110,
-    "file_count": 42
+    "unpacked_size": 226325,
+    "file_count": 45
   },
   {
     "id": "CursorX",
     "name": "CursorX",
     "version": "0.1.0",
     "description": "24 个光标效果，含镜片与悬停态",
-    "size": 51615,
+    "size": 55197,
     "min_host": "2.0.5",
     "dir": "MouseEffect/CursorX",
     "urls": {
@@ -32,17 +32,17 @@
     },
     "author": "CurSeen",
     "license": "AGPL-3.0",
-    "released": "2026-10-28",
+    "released": "2026-10-30",
     "api": 1,
-    "unpacked_size": 105384,
-    "file_count": 24
+    "unpacked_size": 110184,
+    "file_count": 27
   },
   {
     "id": "MFCMouseEffect",
     "name": "MFCMouseEffect",
     "version": "0.1.0",
     "description": "25 个效果：点击、拖尾、滚轮、按住、悬停与光标",
-    "size": 50086,
+    "size": 54376,
     "min_host": "2.0.5",
     "dir": "MouseEffect/MFCMouseEffect",
     "urls": {
@@ -51,17 +51,17 @@
     },
     "author": "CurSeen",
     "license": "AGPL-3.0",
-    "released": "2026-10-28",
+    "released": "2026-10-30",
     "api": 1,
-    "unpacked_size": 100151,
-    "file_count": 25
+    "unpacked_size": 106842,
+    "file_count": 28
   },
   {
     "id": "MouseEffects",
     "name": "MouseEffects",
     "version": "0.1.0",
     "description": "33 个环境与粒子效果：极光、星云、落叶、火焰",
-    "size": 68977,
+    "size": 74797,
     "min_host": "2.0.5",
     "dir": "MouseEffect/MouseEffects",
     "urls": {
@@ -70,9 +70,73 @@
     },
     "author": "CurSeen",
     "license": "AGPL-3.0",
-    "released": "2026-10-28",
+    "released": "2026-10-30",
     "api": 1,
-    "unpacked_size": 137810,
-    "file_count": 33
+    "unpacked_size": 147737,
+    "file_count": 36
+  },
+  {
+    "id": "ImageReport",
+    "name": "图片体检",
+    "version": "0.1.0",
+    "description": "贴图信息一次看完：尺寸、比例、透明度、主色板、对比度、清晰度",
+    "size": 9145,
+    "min_host": "2.0.5",
+    "dir": "Packs/ImageReport",
+    "mount": "scripts",
+    "urls": {
+      "gitee": "https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/ImageReport_0.1.0/ImageReport_0.1.0.zip",
+      "github": "https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/ImageReport_0.1.0/ImageReport_0.1.0.zip"
+    },
+    "author": "CurSeen",
+    "license": "AGPL-3.0",
+    "released": "2026-10-30",
+    "api": 1,
+    "unpacked_size": 17769,
+    "file_count": 4
+  },
+  {
+    "id": "OCR",
+    "name": "OCR 文字识别",
+    "version": "0.2.0",
+    "description": "离线 OCR：识别贴图或剪贴板截图上的文字（官方工具随包，装包即用）",
+    "size": 21156753,
+    "min_host": "2.0.5",
+    "dir": "Packs/OCR",
+    "mount": "scripts",
+    "tool": "ocr",
+    "tool_dest": "scripts/ocr_tool",
+    "urls": {
+      "gitee": "https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/OCR_0.2.0/OCR_0.2.0.zip",
+      "github": "https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/OCR_0.2.0/OCR_0.2.0.zip"
+    },
+    "author": "CurSeen",
+    "license": "AGPL-3.0",
+    "released": "2026-10-30",
+    "api": 1,
+    "unpacked_size": 33024574,
+    "file_count": 9
+  },
+  {
+    "id": "Barcode",
+    "name": "条码识别",
+    "version": "0.1.0",
+    "description": "识别二维码/条形码并显示结果；网址可选直接打开，图片可用默认程序打开",
+    "size": 776609,
+    "min_host": "2.0.5",
+    "dir": "Packs/Barcode",
+    "mount": "scripts",
+    "tool": "barcode",
+    "tool_dest": "scripts/barcode_tool",
+    "urls": {
+      "gitee": "https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/Barcode_0.1.0/Barcode_0.1.0.zip",
+      "github": "https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/Barcode_0.1.0/Barcode_0.1.0.zip"
+    },
+    "author": "CurSeen",
+    "license": "AGPL-3.0",
+    "released": "2026-10-30",
+    "api": 2,
+    "unpacked_size": 1485864,
+    "file_count": 5
   }
 ]

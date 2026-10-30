@@ -2,6 +2,7 @@
   "id": "CursorX",
   "name": "CursorX",
   "version": "0.1.0",
+  "category": "mouse",
   "license": "AGPL-3.0",
   "default": "particle_trail",
   "effects": [
