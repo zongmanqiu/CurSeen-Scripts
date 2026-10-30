@@ -18,7 +18,7 @@ OCR 文字识别与条码识别。
 | CursorX | 0.2.0 | 2026-10-30 | 28 | 50.7 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorX_0.2.0/CursorX_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorX_0.2.0/CursorX_0.2.0.zip) |
 | MFCMouseEffect | 0.2.0 | 2026-10-30 | 29 | 49.3 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MFCMouseEffect_0.2.0/MFCMouseEffect_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MFCMouseEffect_0.2.0/MFCMouseEffect_0.2.0.zip) |
 | MouseEffects | 0.2.0 | 2026-10-30 | 37 | 67.6 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MouseEffects_0.2.0/MouseEffects_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MouseEffects_0.2.0/MouseEffects_0.2.0.zip) |
-| AI 写脚本 | 0.1.0 | 2026-10-30 | 6 | 23.1 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/AI_0.1.0/AI_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/AI_0.1.0/AI_0.1.0.zip) |
+| AI 写脚本 | 0.2.0 | 2026-10-31 | 6 | 28.2 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/AI_0.2.0/AI_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/AI_0.2.0/AI_0.2.0.zip) |
 | 图片体检 | 0.2.0 | 2026-10-30 | 5 | 7.8 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/ImageReport_0.2.0/ImageReport_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/ImageReport_0.2.0/ImageReport_0.2.0.zip) |
 | OCR 文字识别 | 0.3.0 | 2026-10-30 | 10 | 20.2 MB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/OCR_0.3.0/OCR_0.3.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/OCR_0.3.0/OCR_0.3.0.zip) |
 | 条码识别 | 0.2.0 | 2026-10-30 | 6 | 756.8 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/Barcode_0.2.0/Barcode_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/Barcode_0.2.0/Barcode_0.2.0.zip) |
@@ -77,10 +77,14 @@ CursorFX_0.2.0.zip
 ## 构建与发布
 
 ```bash
-python tools/build_packs.py          # 打到仓库外 ../.temp/curseen-scripts-dist，并回写体积
-python tools/build_packs.py --check  # 只校验源目录/清单/地址
-python tools/check_remote.py         # 上传后自检：清单可达 + 全部 zip 真能下、体积对
+python tools/build_packs.py --id AI      # ★ 只重建被改的包（可 --id A,B）；只回写它的清单字段
+python tools/build_packs.py --id AI --check  # 只校验这个包
+python tools/build_packs.py --all        # 发版时才全量重建全部 zip
+python tools/check_remote.py             # 上传后自检：清单可达 + 全部 zip 真能下、体积对
 ```
+
+> ★ 2026-10-31 用户口径：**每个资源单独编译、单独打包，不要互相沾染**。改哪个包就只
+> `--id <包>`；`--all` 只用于正式全量发版。未选中的包不会被重建，也不会改体积字段。
 
 发版：把仓库外打出的 `<id>_<version>.zip` 传到 **Gitee 与 GitHub 的 release**（tag 与资产同名，
 形如 `CursorFX_0.1.0`），再把 `scripts.json` 推到两边的 **`main`** 分支。宿主按

@@ -16,6 +16,11 @@
 仓库只放源码：编译产物与模型由 `tools/<tool>/build.ps1` 生成到仓外
 （默认 `../.temp/curseen-tools/<tool>`）；zip 输出到仓外（默认
 `../.temp/curseen-scripts-dist`）。升级按整个包文件夹替换。
+
+★ 2026-10-31 用户口径：**每次只打包被改的那个资源**。所以必须显式二选一：
+    python tools/build_packs.py --id AI     # 只重建 AI 的 zip + 只回写 AI 的清单字段
+    python tools/build_packs.py --all       # 发版时才允许全量重建
+不指定会直接拒绝；被跳过的包只做结构校验，不生成 zip、不改体积字段。
 """
 
 import argparse
@@ -96,6 +101,13 @@ def package_entries(src: Path, e: dict, tool_root: Path, check: bool):
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true", help="只校验，不写 zip/清单")
+    ap.add_argument(
+        "--id",
+        action="append",
+        default=[],
+        help="只处理这些包 id（可重复，或逗号分隔）；与 --all 二选一，必须显式给",
+    )
+    ap.add_argument("--all", action="store_true", help="全量重建（发版用）")
     ap.add_argument("--out", default=str(DEFAULT_OUT), help=f"zip 输出目录（默认 {DEFAULT_OUT}）")
     ap.add_argument(
         "--tool-root",
@@ -106,9 +118,24 @@ def main() -> None:
     out_dir = Path(args.out)
     tool_root = Path(args.tool_root)
 
+    requested: list[str] = []
+    for item in args.id:
+        requested.extend(x.strip() for x in item.split(",") if x.strip())
+    if args.all and requested:
+        fail("--id 与 --all 只能二选一")
+    if not args.all and not requested:
+        fail("请显式指定 --id <包> 或 --all（防止改一个包时重建全部资源）")
+
     entries = json.loads(CATALOG.read_text(encoding="utf-8"))
     if not isinstance(entries, list) or not entries:
         fail("scripts.json 必须是非空数组")
+
+    all_ids = {e.get("id") for e in entries if isinstance(e.get("id"), str)}
+    selected = set(all_ids) if args.all else set(requested)
+    unknown = sorted(selected - all_ids)
+    if unknown:
+        fail(f"未知包 id：{unknown}（清单里有 {sorted(all_ids)}）")
+    print(f"只处理：{sorted(selected)}（其余包仅做基础校验，不生成 zip / 不改体积）")
 
     seen = set()
     for e in entries:
@@ -128,6 +155,10 @@ def main() -> None:
         if pid in seen:
             fail(f"id 重复：{pid}")
         seen.add(pid)
+
+        # ★ 未被 --id 选中的包：只做上面的基础清单校验，绝不生成 zip / 改体积。
+        if pid not in selected:
+            continue
 
         src = ROOT / e["dir"]
         if not src.is_dir():
