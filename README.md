@@ -13,13 +13,13 @@ CurSeen 的**脚本包**来源：每个包是一份 zip，装进 CurSeen 的 `as
 
 | 包 | 版本 | 发行时间 | 文件数 | 体积 | Gitee | GitHub |
 |---|---:|---|---:|---:|---|---|
-| CursorFX | 0.1.0 | 2026-10-30 | 45 | 97.8 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorFX_0.1.0/CursorFX_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorFX_0.1.0/CursorFX_0.1.0.zip) |
-| CursorX | 0.1.0 | 2026-10-30 | 27 | 53.9 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorX_0.1.0/CursorX_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorX_0.1.0/CursorX_0.1.0.zip) |
-| MFCMouseEffect | 0.1.0 | 2026-10-30 | 28 | 53.1 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.0/MFCMouseEffect_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.0/MFCMouseEffect_0.1.0.zip) |
-| MouseEffects | 0.1.0 | 2026-10-30 | 36 | 73.0 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MouseEffects_0.1.0/MouseEffects_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MouseEffects_0.1.0/MouseEffects_0.1.0.zip) |
-| 图片体检 | 0.1.0 | 2026-10-30 | 4 | 8.9 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/ImageReport_0.1.0/ImageReport_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/ImageReport_0.1.0/ImageReport_0.1.0.zip) |
-| OCR 文字识别 | 0.2.0 | 2026-10-30 | 9 | 20.2 MB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/OCR_0.2.0/OCR_0.2.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/OCR_0.2.0/OCR_0.2.0.zip) |
-| 条码识别 | 0.1.0 | 2026-10-30 | 5 | 758.4 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/Barcode_0.1.0/Barcode_0.1.0.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/Barcode_0.1.0/Barcode_0.1.0.zip) |
+| CursorFX | 0.1.1 | 2026-10-30 | 45 | 99.2 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorFX_0.1.1/CursorFX_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorFX_0.1.1/CursorFX_0.1.1.zip) |
+| CursorX | 0.1.1 | 2026-10-30 | 27 | 54.2 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/CursorX_0.1.1/CursorX_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/CursorX_0.1.1/CursorX_0.1.1.zip) |
+| MFCMouseEffect | 0.1.1 | 2026-10-30 | 28 | 53.4 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.1/MFCMouseEffect_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MFCMouseEffect_0.1.1/MFCMouseEffect_0.1.1.zip) |
+| MouseEffects | 0.1.1 | 2026-10-30 | 36 | 73.3 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/MouseEffects_0.1.1/MouseEffects_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/MouseEffects_0.1.1/MouseEffects_0.1.1.zip) |
+| 图片体检 | 0.1.1 | 2026-10-30 | 4 | 9.2 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/ImageReport_0.1.1/ImageReport_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/ImageReport_0.1.1/ImageReport_0.1.1.zip) |
+| OCR 文字识别 | 0.2.1 | 2026-10-30 | 9 | 20.2 MB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/OCR_0.2.1/OCR_0.2.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/OCR_0.2.1/OCR_0.2.1.zip) |
+| 条码识别 | 0.1.1 | 2026-10-30 | 5 | 758.7 KB | [下载](https://gitee.com/qiuzongman/CurSeen-Scripts/releases/download/Barcode_0.1.1/Barcode_0.1.1.zip) | [下载](https://github.com/zongmanqiu/CurSeen-Scripts/releases/download/Barcode_0.1.1/Barcode_0.1.1.zip) |
 
 **机器清单**：[`scripts.json`](scripts.json)（宿主从两个镜像的 `main` 分支读取）：
 
